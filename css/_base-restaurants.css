@@ -75,7 +75,7 @@ main h2 .underline {
 .btn {
   display: flex;
   justify-content: center;
-  margin: 35px 0px 35px 0;
+  margin-top: 35px;
 }
 .btn input {
   background: linear-gradient(to bottom, #FF79DA 5%, #9356DC 100%);
@@ -85,6 +85,7 @@ main h2 .underline {
   padding: 15px 30px;
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=_base-restaurants.css.map */

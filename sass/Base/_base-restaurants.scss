@@ -64,10 +64,11 @@ main {
 .btn {
     display: flex;
     justify-content: center;
-    margin: 35px 0px 35px 0;
+    margin-top: 35px;
     input {
         @include btn-explore-order;
         display: flex;
         justify-content: center;
+        margin-bottom: 40px;
     }
 }
