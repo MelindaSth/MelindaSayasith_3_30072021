@@ -1,0 +1,9 @@
+.explore--btn {
+  background: linear-gradient(to bottom, #FF79DA 5%, #9356DC 100%);
+  border-radius: 28px;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+}
+
+/*# sourceMappingURL=_btn.css.map */

@@ -1,0 +1,15 @@
+@import "../Utils/variables";
+
+header {
+    text-align: center;
+    margin-top: 5%;
+    #logo {
+        margin-bottom: 2%;
+    }
+    .localisation {
+        display: block;
+        padding: 20px;
+        background-color: $colour-localisation;
+        box-shadow: 1px 14px 9px -10px rgba(100,100,100,1) inset;
+    }
+}

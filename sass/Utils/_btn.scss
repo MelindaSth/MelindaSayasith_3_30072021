@@ -1,0 +1,9 @@
+@import "../Utils/variables";
+
+@mixin btn-explore-order {
+    background:linear-gradient(to bottom, $colour-secondary 5%, $colour-primary 100%);
+	border-radius: 28px;
+	border: none;
+	color: white;
+	padding: 15px 30px;
+}

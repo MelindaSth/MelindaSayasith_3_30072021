@@ -1,0 +1,21 @@
+@import "../Utils/variables";
+@import "../Base/polices";
+
+footer {
+    background-color: $colour-background-footer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    h3 {
+        font-family: "Shrikhand";
+        font-weight: 100;
+        font-size: 1.25em;
+    }
+    .footer__list {
+        list-style: none;
+        padding: 15px 0 0 0;
+        line-height: 30px;
+        font-family: "roboto-thin";
+    }
+}
