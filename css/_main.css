@@ -114,4 +114,14 @@
   font-family: "roboto";
 }
 
+.new {
+  position: absolute;
+  margin: -215px 0 0 180px;
+  padding: 5px 10px;
+  background-color: #99E2D0;
+  font-family: "roboto-bold";
+  color: #008766;
+  border-radius: 3px;
+}
+
 /*# sourceMappingURL=_main.css.map */
