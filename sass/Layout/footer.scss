@@ -1,5 +1,4 @@
 @import "../Utils/variables";
-@import "../Base/polices";
 
 footer {
     background-color: $colour-background-footer;
@@ -16,6 +15,6 @@ footer {
         list-style: none;
         padding: 15px 0 0 0;
         line-height: 30px;
-        font-family: "roboto-thin";
+        font-family: "roboto";
     }
 }
