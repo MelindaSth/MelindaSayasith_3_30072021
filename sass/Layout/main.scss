@@ -1,6 +1,21 @@
 @import "../Utils/variables";
 @import "../Utils/btn";
 
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(../police/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-thin';
+    src: url(../police/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'shrikhand';
+    src: url(../police/Shrikhand-Regular.otf);
+}
+
 .fas {
     font-size: large;
 }
@@ -26,8 +41,7 @@
     background-color: $colour-background;
     p {
         margin: 10px 0 25px 0;
-        font-family: 'roboto';
-        font-weight: 600;
+        font-family: 'roboto-thin';
     }
     input {
         @include btn-explore-order
@@ -109,7 +123,7 @@
     }
     .restaurants__localisation {
         padding: 0 0px 15px 15px;
-        font-family: 'roboto';
+        font-family: 'roboto-thin';
     }
 }
 
