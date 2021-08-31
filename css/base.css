@@ -23,4 +23,21 @@ a:visited {
   color: #000000;
 }
 
+.contact {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.contact:hover {
+  color: #FFFFFF;
+}
+
+.contact:active {
+  color: #FFFFFF;
+}
+
+.contact:visited {
+  color: #FFFFFF;
+}
+
 /*# sourceMappingURL=base.css.map */

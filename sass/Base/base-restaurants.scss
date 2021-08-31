@@ -46,7 +46,7 @@ main {
         padding: 10px 0 10px 15px;
         .underline {
             border-bottom: solid 3px $colour-tertiary;
-            font-family: 'roboto';
+            font-family: 'roboto-thin';
             font-size: 1em;
             padding-bottom: 5px;
         }
@@ -67,7 +67,7 @@ main {
     .courses__caption {
         display: flex;
         justify-content: space-between;
-        font-family: 'roboto';
+        font-family: "roboto-thin";
         font-weight: bolder;
         font-size: smaller;
     }
@@ -82,5 +82,8 @@ main {
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
+    }
+    input:hover {
+        filter: opacity(0.9);
     }
 }

@@ -6,16 +6,30 @@ h1, h2 {
     font-family: "roboto";
 }
 
- a {
-     color: #000000;
-     text-decoration: none;
-  }
-  a:hover {
-     color: #000000;
-  }
-  a:active {
-     color: #000000;
-  }
- a:visited {
-      color: #000000;
-  }
+a {
+    color: #000000;
+    text-decoration: none;
+}
+a:hover {
+color: #000000;
+}
+a:active {
+color: #000000;
+}
+a:visited {
+color: #000000;
+}
+
+.contact {
+color: #FFFFFF;
+text-decoration: none;
+}
+.contact:hover {
+    color: #FFFFFF;
+}
+.contact:active {
+    color: #FFFFFF;
+}
+.contact:visited {
+    color: #FFFFFF;
+}
