@@ -2,31 +2,31 @@
 @import "../Utils/btn";
 
 @font-face {
-    font-family: 'roboto-bold';
-    src: url(../police/Roboto-Bold.ttf);
+font-family: 'roboto-bold';
+src: url(../police/Roboto-Bold.ttf);
 }
 
 @font-face {
-    font-family: 'roboto-thin';
-    src: url(../police/Roboto-Thin.ttf);
+font-family: 'roboto-thin';
+src: url(../police/Roboto-Thin.ttf);
 }
 
 @font-face {
-    font-family: 'shrikhand';
-    src: url(../police/Shrikhand-Regular.otf);
+font-family: 'shrikhand';
+src: url(../police/Shrikhand-Regular.otf);
 }
 
 .fas {
-    font-size: large;
+font-size: large;
 }
 
 .city {
-     border-color: $colour-localisation;
-     background-color: $colour-localisation;
-     border-style: solid;
-     text-align: center;
-     font-size: 1em;
-     font-family: 'roboto';
+    border-color: $colour-localisation;
+    background-color: $colour-localisation;
+    border-style: solid;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'roboto';
     &::placeholder {
         color: black;
     }
@@ -36,24 +36,25 @@
 }
 
 #reservation {
-    text-align: center;
-    padding: 16px 16px 25px 16px;
-    background-color: $colour-background;
+text-align: center;
+padding: 16px 16px 25px 16px;
+background-color: $colour-background;
     p {
         margin: 10px 0 25px 0;
         font-family: 'roboto-thin';
         font-weight: bolder;
     }
     input {
-        @include btn-explore-order
+        @include btn-explore-order 
     }
     input:hover {
         filter: opacity(0.9);
-    }
+        box-shadow: 0px 0px 15px black;
+        }
 }
 
 #fonctionnement {
-    padding: 15px;
+padding: 15px;
     .number {
         border-radius: 50px;
         background-color: $colour-primary;
@@ -62,62 +63,52 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
 }
-    }
-    .element {
-        background-color: $colour-background;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin: 10px 0 10px 0;
-        height: 65px;
-        width: 100%;
-        border-radius: 20px;
-        font-size: 0.7em;
-    }
+.element {
+    background-color: $colour-background;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 10px 0;
+    height: 65px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 0.7em;
+}
 
-    @media screen and (max-width:360px) {
-        .number {
-            margin-left: -25px;
-        }
+@media screen and (max-width:360px) {
+    .number {
+        margin-left: -25px;
     }
-    @media screen and (min-width:361px) and (max-width:390px) {
-        .number {
-            margin-left: -35px;
-        }
+}
+@media screen and (min-width:361px) and (max-width:390px) {
+    .number {
+        margin-left: -35px;
     }
-    @media screen and (min-width:391px) and (max-width:425px) {
-        .number {
-            margin-left: -45px;
-        }
+}
+@media screen and (min-width:391px) and (max-width:425px) {
+    .number {
+        margin-left: -45px;
     }
+}
 
 #restaurants {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 6%;
-    height: 1100px;
-    background-color: $colour-background;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+padding: 0 6%;
+height: 1100px;
+background-color: $colour-background;
     .restaurants__figure, .restaurants__figure__new {
         flex-direction: column;
         align-items: center;
+        box-sizing: content-box;
         width: 100%;
-        max-width: 400px;
+        max-width: 375px;
         box-shadow: 0px 0px 5px 0px #000000;
         border-radius: 20px;
         background-color: white;
-    }
-    .restaurants__figure__new::before {
-        content: "Nouveau";
-        position: absolute;
-        left: 215px;
-        margin-top: 15px;
-        padding: 5px;
-        background-color: #99E2D0;
-        font-family: "roboto";
-        color: #008766;
-        border-radius: 3px;
     }
     img {
         width: 100%;
@@ -128,18 +119,25 @@
         border-top-right-radius: 20px;
     }
     figcaption {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 15px 5px 15px;
+        padding: 5px 15px 5px 15px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        font-family: "roboto";
-    }
-    .restaurants__localisation {
-        padding: 0 0px 15px 15px;
         font-family: 'roboto-thin';
         font-weight: bolder;
+        font-size: 1.2em;
     }
+}
+
+.new {
+    box-sizing: content-box;
+    width: 70px;
+    position: relative;
+    left: 195px;
+    top: -210px;
+    padding: 5px;
+    background-color: #99E2D0;
+    font-family: "roboto";
+    color: #008766;
+    border-radius: 3px;
+    text-align: center;
 }

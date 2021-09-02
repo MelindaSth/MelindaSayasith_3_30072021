@@ -80,10 +80,11 @@ main h2 .underline {
 }
 .btn input {
   background: linear-gradient(to bottom, #FF79DA 5%, #9356DC 100%);
-  border-radius: 28px;
+  border-radius: 30px;
   border: none;
   color: white;
   padding: 15px 30px;
+  box-shadow: 0px 0px 10px black;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;

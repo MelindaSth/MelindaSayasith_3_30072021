@@ -2,8 +2,9 @@
 
 @mixin btn-explore-order {
     background:linear-gradient(to bottom, $colour-secondary 5%, $colour-primary 100%);
-	border-radius: 28px;
+	border-radius: 30px;
 	border: none;
 	color: white;
 	padding: 15px 30px;
+	box-shadow: 0px 0px 10px black;
 }
