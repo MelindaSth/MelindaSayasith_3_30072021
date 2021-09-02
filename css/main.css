@@ -110,6 +110,17 @@
   border-radius: 20px;
   background-color: white;
 }
+#restaurants .restaurants__figure__new::before {
+  content: "Nouveau";
+  position: absolute;
+  left: 215px;
+  margin-top: 15px;
+  padding: 5px;
+  background-color: #99E2D0;
+  font-family: "roboto";
+  color: #008766;
+  border-radius: 3px;
+}
 #restaurants img {
   width: 100%;
   height: 150px;
@@ -125,20 +136,6 @@
   font-family: "roboto-thin";
   font-weight: bolder;
   font-size: 1.2em;
-}
-
-.new {
-  box-sizing: content-box;
-  width: 70px;
-  position: relative;
-  left: 195px;
-  top: -210px;
-  padding: 5px;
-  background-color: #99E2D0;
-  font-family: "roboto";
-  color: #008766;
-  border-radius: 3px;
-  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
