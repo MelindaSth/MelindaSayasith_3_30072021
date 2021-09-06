@@ -53,73 +53,67 @@
 }
 
 #fonctionnement {
-  padding: 15px;
+  padding: 30px 10px;
 }
-#fonctionnement .number {
-  border-radius: 50px;
-  background-color: #9356DC;
-  width: 20px;
-  height: 20px;
+#fonctionnement .fonctionnement {
+  list-style: none;
+  counter-reset: etape;
+  padding: 0;
+}
+#fonctionnement .fonctionnement__etape {
+  padding: 25px;
+  margin: 20px 0px 35px 10px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  font-family: "roboto-bold";
+}
+#fonctionnement .fonctionnement__etape:before {
+  counter-increment: etape 1;
+  content: counter(etape) " ";
+  background: #9356DC;
+  height: 23px;
+  width: 23px;
+  border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  position: absolute;
+  left: -10px;
 }
 
-.element {
-  background-color: #F6F6F6;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 10px 0 10px 0;
-  height: 65px;
-  width: 100%;
-  border-radius: 20px;
-  font-size: 0.7em;
-}
-
-@media screen and (max-width: 360px) {
-  .number {
-    margin-left: -25px;
-  }
-}
-@media screen and (min-width: 361px) and (max-width: 390px) {
-  .number {
-    margin-left: -35px;
-  }
-}
-@media screen and (min-width: 391px) and (max-width: 425px) {
-  .number {
-    margin-left: -45px;
-  }
-}
 #restaurants {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0 6%;
+  padding: 40px 15px;
   height: 1100px;
   background-color: #F6F6F6;
 }
-#restaurants .restaurants__figure, #restaurants .restaurants__figure__new {
-  flex-direction: column;
-  align-items: center;
-  box-sizing: content-box;
-  width: 100%;
-  max-width: 375px;
-  box-shadow: 0px 0px 5px 0px #000000;
-  border-radius: 20px;
-  background-color: white;
+#restaurants .restaurants__title {
+  padding-bottom: 25px;
 }
-#restaurants .restaurants__figure__new::before {
-  content: "Nouveau";
-  position: absolute;
-  left: 215px;
-  margin-top: 15px;
-  padding: 5px;
+#restaurants .restaurants__figure__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 30px;
+}
+#restaurants .restaurants__figure, #restaurants .restaurants__figure__new {
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 5px black;
+}
+#restaurants .restaurants__figure__new__tag {
   background-color: #99E2D0;
-  font-family: "roboto";
   color: #008766;
-  border-radius: 3px;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "roboto-bold";
 }
 #restaurants img {
   width: 100%;
@@ -129,13 +123,28 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-#restaurants figcaption {
-  padding: 5px 15px 5px 15px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+#restaurants .figcaption__restaurants {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#restaurants .figcaption__details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#restaurants .figcaption__restaurants__name {
+  font-family: "roboto-bold";
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+#restaurants .figcaption__restaurants__city {
   font-family: "roboto-thin";
   font-weight: bolder;
-  font-size: 1.2em;
+}
+#restaurants .btn__heart {
+  border: solid 1px green;
 }
 
 /*# sourceMappingURL=main.css.map */
