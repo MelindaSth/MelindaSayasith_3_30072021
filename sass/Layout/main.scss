@@ -89,15 +89,9 @@ background-color: $colour-background;
 
 #restaurants {
 padding: 40px 15px;
-height: 1100px;
 background-color: $colour-background;
     .restaurants__title {
         padding-bottom: 25px;
-    }
-    .restaurants__figure__list {
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        row-gap: 30px;
     }
     .restaurants__figure, .restaurants__figure__new {
         background-color: white;
@@ -145,5 +139,29 @@ background-color: $colour-background;
     }
     .btn__heart {
         border: solid 1px green;
+    }
+}
+
+@media (max-width: 1023px) {
+    .restaurants__figure__list {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .fonctionnement { 
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .fonctionnement__etape {
+        width: 250px;
+    }
+    .restaurants__figure__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 30px;
     }
 }

@@ -88,16 +88,10 @@
 
 #restaurants {
   padding: 40px 15px;
-  height: 1100px;
   background-color: #F6F6F6;
 }
 #restaurants .restaurants__title {
   padding-bottom: 25px;
-}
-#restaurants .restaurants__figure__list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 30px;
 }
 #restaurants .restaurants__figure, #restaurants .restaurants__figure__new {
   background-color: white;
@@ -145,6 +139,31 @@
 }
 #restaurants .btn__heart {
   border: solid 1px green;
+}
+
+@media (max-width: 1023px) {
+  .restaurants__figure__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .fonctionnement__etape {
+    width: 250px;
+  }
+
+  .restaurants__figure__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
