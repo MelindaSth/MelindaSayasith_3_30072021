@@ -1,8 +1,11 @@
 header {
   display: flex;
-  justify-content: space-evenly;
+  margin: 15px;
+}
+header .header__row {
+  display: flex;
   align-items: center;
-  padding: 3%;
+  flex: 0.5;
 }
 header #logo {
   width: 160px;
