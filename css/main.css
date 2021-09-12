@@ -3,27 +3,33 @@
     opacity: 1;
     z-index: 1;
   }
+  50% {
+    opacity: 1;
+    z-index: 1;
+  }
   100% {
     opacity: 0;
     z-index: -1;
   }
 }
-@keyframes text_load {
-  0% {
-    opacity: 1;
-    transform: scale(0);
+@keyframes flip {
+  40% {
+    transform: rotateX(360deg);
   }
   100% {
-    opacity: 0;
-    transform: scale(1);
+    transform: rotatex(360deg);
   }
 }
-@keyframes itemAppear {
+@keyframes slide-top {
   0% {
-    transform: scale(0);
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
+    opacity: 1;
   }
 }
 @font-face {
@@ -51,11 +57,41 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 1;
-  animation: loader 2s ease 3s forwards;
+  z-index: 0;
+  animation: loader 3s ease-in-out both;
+  perspective: 700px;
 }
-.load .load__text {
-  animation: text_load 1.5s ease infinite alternate;
+
+.load__text {
+  font-size: 2em;
+  margin: 5px;
+  animation: flip 1.8s ease;
+  transform-origin: 0 50%;
+  transform-style: preserve-3d;
+}
+.load__text.load__text-1 {
+  animation-delay: 0.1s;
+}
+.load__text.load__text-2 {
+  animation-delay: 0.2s;
+}
+.load__text.load__text-3 {
+  animation-delay: 0.3s;
+}
+.load__text.load__text-4 {
+  animation-delay: 0.4s;
+}
+.load__text.load__text-5 {
+  animation-delay: 0.5s;
+}
+.load__text.load__text-6 {
+  animation-delay: 0.6s;
+}
+.load__text.load__text-7 {
+  animation-delay: 0.7s;
+}
+.load__text.load__text-8 {
+  animation-delay: 0.8s;
 }
 
 .city {
