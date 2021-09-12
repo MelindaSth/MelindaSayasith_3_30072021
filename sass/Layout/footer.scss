@@ -1,4 +1,4 @@
-@import "../Utils/variables";
+@import "../Utils/colours.scss";
 
 footer {
     background-color: $colour-background-footer;
@@ -8,7 +8,8 @@ footer {
     padding: 20px;
     h3 {
         font-family: "Shrikhand";
-        font-weight: 100;
+        font-weight: lighter;
+        letter-spacing: 0.4px;
         font-size: 1.25em;
     }
     .footer__list {
@@ -17,4 +18,19 @@ footer {
         line-height: 30px;
         font-family: "roboto";
     }
+    .footer__suggest {
+        display: flex;
+        align-items: center;
+    }
+    .fa-utensils {
+        margin: 0 18px 0 0;
+    }
+    .footer__sponso {
+        display: flex;
+        align-items: center;
+    }
+    .fa-hands-helping {
+            margin: 0 10px 0 0;
+    }
 }
+    
