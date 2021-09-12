@@ -4,18 +4,14 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  font-family: "roboto";
+  font-weight: 400;
 }
 footer h3 {
   font-family: "Shrikhand";
   font-weight: lighter;
   letter-spacing: 0.4px;
   font-size: 1.25em;
-}
-footer .footer__list {
-  list-style: none;
-  padding: 15px 0 0 0;
-  line-height: 30px;
-  font-family: "roboto";
 }
 footer .footer__suggest {
   display: flex;
