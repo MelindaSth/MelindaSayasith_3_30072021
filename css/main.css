@@ -219,15 +219,35 @@
   font-family: "roboto-thin";
   font-weight: bolder;
 }
-#restaurants .btn__heart {
-  height: 30px;
-  width: 30px;
-  font-size: 1.5em;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+
+.fas.fa-heart {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+
+.btn__heart:hover .fas.fa-heart {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.far.fa-heart {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  opacity: 1;
+}
+
+.btn__heart:hover .far.fa-heart {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 1023px) {
