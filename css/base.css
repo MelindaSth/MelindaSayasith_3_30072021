@@ -6,6 +6,10 @@ h1, h2 {
   font-family: "roboto";
 }
 
+.fas {
+  font-size: large;
+}
+
 a {
   color: #000000;
   text-decoration: none;

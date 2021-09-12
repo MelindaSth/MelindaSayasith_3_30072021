@@ -1,3 +1,23 @@
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes text_load {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
 * {
   margin: 0;
 }
@@ -21,36 +41,42 @@ a:visited {
 
 #restaurants__pictures {
   width: 100%;
-  height: 180px;
+  height: 200px;
   image-rendering: pixelated;
   object-fit: cover;
 }
 
 main {
+  margin-top: -40px;
+  border-radius: 15px 15px 0 0;
   background-color: #F6F6F6;
-  border-radius: 20px 20px 0 0;
+  z-index: 1;
   position: relative;
-  margin-top: -30px;
 }
-main h1 {
-  font-family: "shrikhand";
-  font-weight: 100;
-  font-size: 1.7em;
+
+.restaurants__card {
+  padding: 15px 10px 0 10px;
+  margin: 15px 0;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 20px 0 20px 0;
+  justify-content: space-between;
 }
-main h2 {
-  font-family: "roboto-thin";
-  font-size: 1em;
-  padding: 10px 0 10px 15px;
+.restaurants__card .restaurants__title {
+  font-family: "shrikhand";
 }
-main h2 .underline {
-  border-bottom: solid 3px #99E2D0;
-  font-family: "roboto-thin";
-  font-size: 1em;
-  padding-bottom: 5px;
+.restaurants__card .btn__heart {
+  height: 30px;
+  width: 30px;
+  font-size: 1.5em;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu__card {
+  display: grid;
 }
 
 @media (max-width: 1023px) {
@@ -64,25 +90,124 @@ main h2 .underline {
   .menu__card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
+    column-gap: 10px;
   }
 }
-.menu__element {
-  margin: 10px;
-  padding: 3%;
+#starters, #courses, #desserts {
+  padding: 0 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+#starters h2, #courses h2, #desserts h2 {
+  margin: 0 0 25px 0;
+  font-family: "roboto-thin";
+}
+#starters .underline, #courses .underline, #desserts .underline {
+  border-bottom: solid 3px #99E2D0;
+  font-family: "roboto-thin";
+  font-size: 1em;
+  padding-bottom: 5px;
+}
+
+.menu {
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 0px 5px black;
-}
-.menu__element .courses__name {
-  font-family: "roboto";
-}
-.menu__element .courses__caption {
   display: flex;
-  justify-content: space-between;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px 10px 10px 15px;
+  box-shadow: 0px 0px 5px black;
+  overflow: hidden;
+  cursor: pointer;
+  animation: one-by-one 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  max-width: 100%;
+}
+.menu.delay-0 {
+  animation-delay: 0s;
+}
+.menu.delay-1 {
+  animation-delay: 0.2s;
+}
+.menu.delay-2 {
+  animation-delay: 0.4s;
+}
+.menu.delay-3 {
+  animation-delay: 0.6s;
+}
+.menu.delay-4 {
+  animation-delay: 0.8s;
+}
+.menu.delay-5 {
+  animation-delay: 1s;
+}
+.menu.delay-6 {
+  animation-delay: 1.2s;
+}
+.menu.delay-7 {
+  animation-delay: 1.4s;
+}
+.menu.delay-8 {
+  animation-delay: 1.6s;
+}
+.menu.delay-9 {
+  animation-delay: 1.8s;
+}
+.menu .menu__details {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.menu .menu__name {
+  font-family: "roboto-bold";
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0 0 10px 0;
+}
+.menu .menu__caption {
   font-family: "roboto-thin";
   font-weight: bolder;
-  font-size: smaller;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .menu__price {
+  font-family: "roboto";
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+.menu .menu__check {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menu:hover .menu__check {
+  margin-right: -10px;
+}
+.menu .fa-check {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+.menu:hover .fa-check {
+  transform: rotate(0);
+}
+.menu .fa-check {
+  color: #99E2D0;
 }
 
 .btn {
@@ -95,8 +220,11 @@ main h2 .underline {
   border-radius: 30px;
   border: none;
   color: white;
-  padding: 15px 30px;
   box-shadow: 0px 0px 10px black;
+  padding: 15px 45px;
+  margin-bottom: 40px;
+  font-family: "roboto-thin";
+  font-weight: bold;
   display: flex;
   justify-content: center;
   margin-bottom: 40px;

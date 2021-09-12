@@ -1,3 +1,31 @@
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes text_load {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @font-face {
   font-family: "roboto-bold";
   src: url(../police/Roboto-Bold.ttf);
@@ -10,8 +38,24 @@
   font-family: "shrikhand";
   src: url(../police/Shrikhand-Regular.otf);
 }
-.fas {
-  font-size: large;
+.load {
+  font-family: "shrikhand";
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  animation: loader 2s ease 3s forwards;
+}
+.load .load__text {
+  animation: text_load 1.5s ease infinite alternate;
 }
 
 .city {
@@ -44,8 +88,11 @@
   border-radius: 30px;
   border: none;
   color: white;
-  padding: 15px 30px;
   box-shadow: 0px 0px 10px black;
+  padding: 15px 45px;
+  margin-bottom: 40px;
+  font-family: "roboto-thin";
+  font-weight: bold;
 }
 #reservation input:hover {
   filter: opacity(0.9);
@@ -57,8 +104,8 @@
 }
 #fonctionnement .fonctionnement {
   list-style: none;
-  counter-reset: etape;
   padding: 0;
+  counter-reset: etape;
 }
 #fonctionnement .fonctionnement__etape {
   padding: 25px;
@@ -72,8 +119,6 @@
   font-family: "roboto-bold";
 }
 #fonctionnement .fonctionnement__etape:before {
-  counter-increment: etape 1;
-  content: counter(etape) " ";
   background: #9356DC;
   height: 23px;
   width: 23px;
@@ -84,6 +129,8 @@
   color: white;
   position: absolute;
   left: -10px;
+  counter-increment: etape 1;
+  content: counter(etape) " ";
 }
 
 #restaurants {
@@ -102,8 +149,8 @@
 #restaurants .restaurants__figure__new__tag {
   background-color: #99E2D0;
   color: #008766;
-  padding: 0.5rem;
-  border-radius: 0.125rem;
+  padding: 10px;
+  border-radius: 5px;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -114,11 +161,10 @@
   height: 150px;
   object-fit: cover;
   image-rendering: pixelated;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px 20px 0 0;
 }
 #restaurants .figcaption__restaurants {
-  padding: 1rem;
+  padding: 20px 25px 20px 20px;
   position: relative;
   display: flex;
   align-items: center;
@@ -138,7 +184,14 @@
   font-weight: bolder;
 }
 #restaurants .btn__heart {
-  border: solid 1px green;
+  height: 30px;
+  width: 30px;
+  font-size: 1.5em;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 @media (max-width: 1023px) {

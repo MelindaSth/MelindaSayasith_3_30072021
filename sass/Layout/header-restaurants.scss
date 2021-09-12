@@ -1,12 +1,23 @@
-header {
+.header__back {
+    position: relative;
+    margin: 10px;
+}
+
+.fa-arrow-left {
+    position: absolute;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    top: 20px;
     display: flex;
-    margin: 15px;
-    .header__row {
-        display: flex;
-        align-items: center;
-        flex: 0.5;
-    }
-    #logo {
-        width: 160px;
-    }
-} 
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-17px);
+    font-size: 1.2em;
+    color: black;
+  }
+
+  .header__title {
+    font-family: 'shrikhand';
+    text-align: center;
+  }

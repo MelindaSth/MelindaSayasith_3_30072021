@@ -1,5 +1,6 @@
-@import "../Utils/variables";
+@import "../Utils/colours";
 @import "../Utils/btn";
+@import "../Utils/keyframes";
 
 * {
     margin: 0;
@@ -8,49 +9,48 @@
 a {
     color: #FFFF;
     text-decoration: none;
- }
+}
  a:hover {
     color: #000000;
- }
+}
  a:active {
     color: #000000;
- }
+}
 a:visited {
      color: #000000;
- }
+}
 
 #restaurants__pictures {
     width: 100%;
-    height: 180px;
+    height: 200px;
     image-rendering: pixelated;
     object-fit: cover;
 }
 
 main {
+    margin-top: -40px;
+    border-radius: 15px 15px 0 0;
     background-color: $colour-background;
-    border-radius: 20px 20px 0 0;
+    z-index: 1;
     position: relative;
-    margin-top: -30px;
-    h1 {
-        font-family: "shrikhand";
-        font-weight: 100;
-        font-size: 1.7em;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 20px 0 20px 0;
+}
+
+.restaurants__card {
+    padding: 15px 10px 0 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .restaurants__title {
+        font-family: 'shrikhand';
     }
-    h2 {
-        font-family: 'roboto-thin';
-        font-size: 1em;
-        padding: 10px 0 10px 15px;
-        .underline {
-            border-bottom: solid 3px $colour-tertiary;
-            font-family: 'roboto-thin';
-            font-size: 1em;
-            padding-bottom: 5px;
-        }
+    .btn__heart {
+        @include btn-heart;
     }
+}
+
+.menu__card {
+    display: grid;
 }
 
 @media (max-width: 1023px) {
@@ -65,25 +65,101 @@ main {
     .menu__card {
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        column-gap: 1rem;
+        column-gap: 10px;
     }
 }
 
-.menu__element {
-    margin: 10px;
-    padding: 3%;
+#starters, #courses, #desserts {
+    padding: 0 10px;
+    max-width: 100%;
+    overflow: hidden;
+    h2 {
+        margin: 0 0 25px 0;
+        font-family: 'roboto-thin';
+    }
+    .underline {
+        border-bottom: solid 3px $colour-tertiary;
+        font-family: 'roboto-thin';
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+}
+
+.menu {
     background-color: white;
+    display: flex;
     border-radius: 15px;
+    margin: 10px;
+    padding: 10px 10px 10px 15px;
     box-shadow: 0px 0px 5px black;
-    .courses__name {
-        font-family: 'roboto';
-    }  
-    .courses__caption {
-        display: flex;
-        justify-content: space-between;
-        font-family: "roboto-thin";
+    overflow: hidden;
+    cursor: pointer;
+    animation: one-by-one 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+    // transform: scale(0);
+    max-width: 100%;
+    @for $i from 0 through 9 {
+        &.delay-#{$i} {
+            animation-delay: 0.2s * $i;
+        }
+    }
+    .menu__details {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
+    .menu__name {
+        font-family: 'roboto-bold';
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0 0 10px 0;
+    }
+    .menu__caption {
+        font-family: 'roboto-thin';
         font-weight: bolder;
-        font-size: smaller;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .menu__price {
+        font-family: 'roboto';
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: .5rem;
+    }
+    .menu__check {
+        background-color: $colour-tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: .5s;
+    }
+    &:hover .menu__check {
+        margin-right: -10px;
+    }
+    .fa-check {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transform: rotate(360deg);
+        transition-duration: 0.5s;
+    }
+    &:hover .fa-check {
+        transform: rotate(0);
+    
+    }
+    .fa-check {
+        color: $colour-tertiary;
     }
 }
 

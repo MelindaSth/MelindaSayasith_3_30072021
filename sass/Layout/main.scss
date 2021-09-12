@@ -1,23 +1,42 @@
-@import "../Utils/variables";
+@import "../Utils/colours";
 @import "../Utils/btn";
+@import "../Utils/keyframes";
 
 @font-face {
-font-family: 'roboto-bold';
-src: url(../police/Roboto-Bold.ttf);
-}
-
+    font-family: 'roboto-bold';
+    src: url(../police/Roboto-Bold.ttf);
+}   
 @font-face {
 font-family: 'roboto-thin';
 src: url(../police/Roboto-Thin.ttf);
 }
-
 @font-face {
 font-family: 'shrikhand';
 src: url(../police/Shrikhand-Regular.otf);
 }
 
-.fas {
-font-size: large;
+// ANIMATION LOADER // 
+
+
+
+.load {
+    font-family: "shrikhand";
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: $colour-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    animation: loader 2s ease 3s forwards;
+    .load__text {
+    animation: text_load 1.5s ease infinite alternate;
+    }
 }
 
 .city {
@@ -45,7 +64,7 @@ background-color: $colour-background;
         font-weight: bolder;
     }
     input {
-        @include btn-explore-order 
+        @include btn-explore-order;
     }
     input:hover {
         filter: opacity(0.9);
@@ -57,8 +76,8 @@ background-color: $colour-background;
     padding: 30px 10px;
     .fonctionnement {
     list-style: none;
-    counter-reset: etape;
     padding: 0;
+    counter-reset: etape;
     }
     .fonctionnement__etape {
         padding: 25px;
@@ -72,8 +91,6 @@ background-color: $colour-background;
         font-family: 'roboto-bold';
         }
     .fonctionnement__etape:before {
-        counter-increment: etape 1;
-        content: counter(etape) " ";
         background: $colour-primary;
         height: 23px;
         width: 23px;
@@ -84,6 +101,8 @@ background-color: $colour-background;
         color: white;
         position: absolute;
         left: -10px;
+        counter-increment: etape 1;
+        content: counter(etape) " ";
     }
 }
 
@@ -102,8 +121,8 @@ background-color: $colour-background;
     .restaurants__figure__new__tag {
         background-color: #99E2D0;
         color: #008766;
-        padding: .5rem;
-        border-radius: .125rem;
+        padding: 10px;
+        border-radius: 5px;
         position: absolute;
         top: 10px;
         right: 10px;
@@ -114,11 +133,10 @@ background-color: $colour-background;
         height: 150px;
         object-fit: cover;
         image-rendering: pixelated;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-radius: 20px 20px 0 0;
     }
     .figcaption__restaurants {
-        padding: 1rem;
+        padding: 20px 25px 20px 20px;
         position: relative;
         display: flex;
         align-items: center;
@@ -138,7 +156,7 @@ background-color: $colour-background;
         font-weight: bolder;
     }
     .btn__heart {
-        border: solid 1px green;
+        @include btn-heart;
     }
 }
 
