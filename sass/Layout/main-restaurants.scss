@@ -1,0 +1,171 @@
+@import "../Utils/colours";
+@import "../Utils/btn";
+@import "../Utils/keyframes";
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(../police/Roboto-Bold.ttf);
+}   
+@font-face {
+font-family: 'roboto-thin';
+src: url(../police/Roboto-Thin.ttf);
+}
+@font-face {
+font-family: 'shrikhand';
+src: url(../police/Shrikhand-Regular.otf);
+}
+
+#restaurants__pictures {
+    width: 100%;
+    height: 200px;
+    image-rendering: pixelated;
+    object-fit: cover;
+}
+
+main {
+    margin-top: -40px;
+    border-radius: 15px 15px 0 0;
+    background-color: $colour-background;
+    z-index: 1;
+    position: relative;
+}
+
+.restaurants__card {
+    padding: 15px 10px 0 10px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .restaurants__title {
+        font-family: 'shrikhand';
+    }
+}
+
+.menu__card {
+    display: grid;
+}
+
+@media (max-width: 1023px) {
+    .menu__card {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu__card {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 10px;
+    }
+}
+
+#starters, #courses, #desserts {
+    padding: 0 10px;
+    max-width: 100%;
+    overflow: hidden;
+    h2 {
+        margin: 0 0 25px 0;
+        font-family: 'roboto-thin';
+    }
+    .underline {
+        border-bottom: solid 3px $colour-tertiary;
+        font-family: 'roboto-thin';
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+}
+
+.menu {
+    background-color: white;
+    display: flex;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px 10px 10px 15px;
+    box-shadow: 0px 5px 5px 0px #AAAAAA;
+    overflow: hidden;
+    cursor: pointer;
+    animation: slide-top 1s ease-in-out 0.2s both;
+    transform: translateY(0);
+    max-width: 100%;
+    @for $i from 0 through 9 {
+        &.delay-#{$i} {
+            animation-delay: 0.2s * $i;
+        }
+    }
+    .menu__details {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
+    .menu__name {
+        font-family: 'roboto-bold';
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0 0 10px 0;
+    }
+    .menu__caption {
+        font-family: 'roboto-thin';
+        font-weight: bolder;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .menu__price {
+        font-family: 'roboto';
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: .5rem;
+    }
+    .menu__check {
+        background-color: $colour-tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: .5s;
+    }
+    &:hover .menu__check {
+        margin-right: -10px;
+    }
+    .fa-check {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transform: rotate(360deg);
+        transition-duration: 0.5s;
+    }
+    &:hover .fa-check {
+        transform: rotate(0);
+    
+    }
+    .fa-check {
+        color: $colour-tertiary;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    input {
+        @include btn-explore-order;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    input:hover {
+        filter: opacity(0.9);
+    }
+}

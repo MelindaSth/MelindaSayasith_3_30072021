@@ -124,15 +124,15 @@
   border-radius: 30px;
   border: none;
   color: white;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 5px 5px 0px #aaaaaad3;
   padding: 15px 45px;
   margin-bottom: 40px;
   font-family: "roboto-thin";
   font-weight: bold;
 }
 #reservation input:hover {
-  filter: opacity(0.9);
-  box-shadow: 0px 0px 15px black;
+  filter: brightness(105%);
+  box-shadow: 0px 5px 5px 0px #AAAAAA;
 }
 
 #fonctionnement {
@@ -146,7 +146,7 @@
 #fonctionnement .fonctionnement__etape {
   padding: 25px;
   margin: 20px 0px 35px 10px;
-  box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 5px 5px 0px #AAAAAA;
   border-radius: 20px;
   background-color: #F6F6F6;
   display: flex;
@@ -180,7 +180,7 @@
   background-color: white;
   border-radius: 20px;
   position: relative;
-  box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 5px 5px 0px #AAAAAA;
 }
 #restaurants .restaurants__figure__new__tag {
   background-color: #99E2D0;
@@ -221,7 +221,7 @@
 }
 
 .fas.fa-heart {
-  font-size: 1.5rem;
+  font-size: 25px;
   position: absolute;
   right: 25px;
   top: 30px;
@@ -238,7 +238,7 @@
 }
 
 .far.fa-heart {
-  font-size: 1.5rem;
+  font-size: 26px;
   position: absolute;
   right: 25px;
   top: 30px;

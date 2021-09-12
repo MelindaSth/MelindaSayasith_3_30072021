@@ -15,6 +15,8 @@ font-family: 'shrikhand';
 src: url(../police/Shrikhand-Regular.otf);
 }
 
+// LOADER //
+
 .load {
     font-family: "shrikhand";
     width: 100%;
@@ -46,6 +48,8 @@ src: url(../police/Shrikhand-Regular.otf);
     }
 }
 
+// SEARCH CITY //
+
 .city {
     border-color: $colour-localisation;
     background-color: $colour-localisation;
@@ -74,10 +78,12 @@ background-color: $colour-background;
         @include btn-explore-order;
     }
     input:hover {
-        filter: opacity(0.9);
-        box-shadow: 0px 0px 15px black;
-        }
+        filter: brightness(105%);
+        box-shadow: 0px 5px 5px 0px #AAAAAA;
+    }
 }
+
+// HOW TO USE //
 
 #fonctionnement {
     padding: 30px 10px;
@@ -89,7 +95,7 @@ background-color: $colour-background;
     .fonctionnement__etape {
         padding: 25px;
         margin: 20px 0px 35px 10px;
-        box-shadow: 0px 0px 5px black;
+        box-shadow: 0px 5px 5px 0px #AAAAAA;
         border-radius: 20px;
         background-color: $colour-background;
         display: flex;
@@ -113,6 +119,8 @@ background-color: $colour-background;
     }
 }
 
+// LISTING RESTAURANTS // 
+
 #restaurants {
 padding: 40px 15px;
 background-color: $colour-background;
@@ -123,7 +131,7 @@ background-color: $colour-background;
         background-color: white;
         border-radius: 20px;
         position: relative;
-        box-shadow: 0px 0px 5px black;
+        box-shadow: 0px 5px 5px 0px #AAAAAA;
     }
     .restaurants__figure__new__tag {
         background-color: #99E2D0;
@@ -164,12 +172,14 @@ background-color: $colour-background;
     }
 }
 
+// HEART ICON //
+
 .fas.fa-heart {
-    font-size: 1.5rem;
+    font-size: 25px;
     position: absolute;
     right: 25px;
     top: 30px;
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($colour-secondary, $colour-primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -182,7 +192,7 @@ background-color: $colour-background;
 }
 
 .far.fa-heart {
-    font-size: 1.5rem;
+    font-size: 26px;
     position: absolute;
     right: 25px;
     top: 30px;
@@ -194,7 +204,7 @@ background-color: $colour-background;
     transition: 0.3s ease-in-out;
 }
 
-
+// MEDIA QUERIES // 
 
 @media (max-width: 1023px) {
     .restaurants__figure__list {
