@@ -1,0 +1,33 @@
+// LOADER //
+
+@keyframes loader {
+    0%{
+        opacity: 1;
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+
+    }
+}
+
+@keyframes text_load {
+    0%{
+        opacity: 1;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes one-by-one {
+    0% {
+        transform: translateY(O);
+    }
+    100% {
+        transform: translateY(1);
+    }
+}
