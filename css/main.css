@@ -48,7 +48,7 @@
   font-family: "shrikhand";
   src: url(../police/Shrikhand-Regular.otf);
 }
-.load__background .load {
+.load {
   font-family: "shrikhand";
   display: flex;
   justify-content: center;
