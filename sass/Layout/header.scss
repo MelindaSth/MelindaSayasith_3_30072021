@@ -1,4 +1,4 @@
-@import "../Utils/variables";
+@import "../Utils/colours.scss";
 
 header {
     text-align: center;
@@ -10,6 +10,6 @@ header {
         display: block;
         padding: 20px;
         background-color: $colour-localisation;
-        box-shadow: 1px 14px 9px -10px rgba(100,100,100,1) inset;
+        box-shadow: 1px 9px 9px -10px rgba(100,100,100,1) inset;
     }
 }

@@ -7,6 +7,10 @@
     opacity: 1;
     z-index: 1;
   }
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
   100% {
     opacity: 0;
     z-index: -1;
@@ -15,20 +19,20 @@
 @keyframes flip {
   40% {
     transform: rotateX(360deg);
+    opacity: 1;
   }
   100% {
     transform: rotatex(360deg);
+    opacity: 0;
   }
 }
 @keyframes slide-top {
   0% {
-    transform: scaleY(0);
-    transform-origin: 0% 100%;
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
-    transform-origin: 0% 100%;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -44,22 +48,25 @@
   font-family: "shrikhand";
   src: url(../police/Shrikhand-Regular.otf);
 }
-.load {
+.load__background {
+  border: solid 1px red;
+}
+.load__background .load {
   font-family: "shrikhand";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 0;
+  animation: loader 4s ease-in-out both;
+  perspective: 700px;
+  background-color: #F6F6F6;
   width: 100%;
   height: 100%;
   top: 0%;
   bottom: 0%;
   left: 0%;
   right: 0%;
-  background-color: #F6F6F6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 0;
-  animation: loader 3s ease-in-out both;
-  perspective: 700px;
 }
 
 .load__text {
@@ -111,7 +118,7 @@
 
 #reservation {
   text-align: center;
-  padding: 16px 16px 25px 16px;
+  padding: 40px 16px 25px 16px;
   background-color: #F6F6F6;
 }
 #reservation p {
@@ -128,7 +135,9 @@
   padding: 15px 45px;
   margin-bottom: 40px;
   font-family: "roboto-thin";
-  font-weight: bold;
+  font-size: 1em;
+  font-weight: bolder;
+  cursor: pointer;
 }
 #reservation input:hover {
   filter: brightness(105%);
@@ -145,7 +154,7 @@
 }
 #fonctionnement .fonctionnement__etape {
   padding: 25px;
-  margin: 20px 0px 35px 10px;
+  margin: 20px 0px 25px 10px;
   box-shadow: 0px 5px 5px 0px #AAAAAA;
   border-radius: 20px;
   background-color: #F6F6F6;
@@ -153,6 +162,16 @@
   position: relative;
   justify-content: space-evenly;
   font-family: "roboto-bold";
+}
+#fonctionnement .fonctionnement__etape:hover {
+  cursor: pointer;
+  background-color: #f5edff;
+}
+#fonctionnement .fonctionnement__etape:hover .fa-store, #fonctionnement .fonctionnement__etape:hover .fa-list-ul, #fonctionnement .fonctionnement__etape:hover .fa-mobile-alt {
+  color: #9356DC;
+}
+#fonctionnement .fa-store, #fonctionnement .fa-list-ul, #fonctionnement .fa-mobile-alt {
+  color: #7e7e7e;
 }
 #fonctionnement .fonctionnement__etape:before {
   background: #9356DC;
@@ -167,6 +186,25 @@
   left: -10px;
   counter-increment: etape 1;
   content: counter(etape) " ";
+  font-family: "roboto-thin";
+  font-weight: 600;
+}
+
+.restaurants__link {
+  color: black;
+  text-decoration: none;
+}
+
+.restaurants__link:hover {
+  color: black;
+}
+
+.restaurants__link:active {
+  color: black;
+}
+
+.restaurants__link:visited {
+  color: black;
 }
 
 #restaurants {
@@ -224,7 +262,7 @@
   font-size: 25px;
   position: absolute;
   right: 25px;
-  top: 30px;
+  top: 15px;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
@@ -241,7 +279,7 @@
   font-size: 26px;
   position: absolute;
   right: 25px;
-  top: 30px;
+  top: 15px;
   opacity: 1;
 }
 

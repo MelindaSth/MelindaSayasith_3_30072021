@@ -3,11 +3,13 @@
 @mixin btn-explore-order {
     background:linear-gradient(to bottom, $colour-secondary 5%, $colour-primary 100%);
 	border-radius: 30px;
-	border: none;
-	color: white;
-	box-shadow: 0px 5px 5px 0px #aaaaaad3;
+    border: none;
+    color: white;
+    box-shadow: 0px 5px 5px 0px #aaaaaad3;
     padding: 15px 45px;
     margin-bottom: 40px;
-    font-family: 'roboto-thin';
-    font-weight: bold;
+    font-family: "roboto-thin";
+    font-size: 1em;
+    font-weight: bolder;
+    cursor: pointer;
 }

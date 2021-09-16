@@ -1,18 +1,34 @@
 @import "../Utils/colours.scss";
 
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+color: white;
+}
+a:active {
+color: white;
+}
+a:visited {
+color: white;
+}
+
 footer {
     background-color: $colour-background-footer;
     color: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    font-family: "roboto";
-    font-weight: 400;
+    font-family: "roboto-thin";
+    font-weight: bolder;
+    line-height: 27px;
     h3 {
         font-family: "Shrikhand";
         font-weight: lighter;
-        letter-spacing: 0.4px;
-        font-size: 1.25em;
+        letter-spacing: 0.5px;
+        font-size: 2vh;
+        padding: 0px 0px 10px 0;
     }
     .footer__suggest {
         display: flex;
@@ -20,13 +36,16 @@ footer {
     }
     .fa-utensils {
         margin: 0 18px 0 0;
+        font-size: 1em;
     }
     .footer__sponso {
         display: flex;
         align-items: center;
+        
     }
     .fa-hands-helping {
-            margin: 0 10px 0 0;
+        margin: 0 10px 0 0;
+        font-size: 0.9em;
     }
 }
     

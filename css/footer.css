@@ -1,17 +1,36 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
 footer {
   background-color: #353535;
   color: white;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  font-family: "roboto";
-  font-weight: 400;
+  font-family: "roboto-thin";
+  font-weight: bolder;
+  line-height: 27px;
 }
 footer h3 {
   font-family: "Shrikhand";
   font-weight: lighter;
-  letter-spacing: 0.4px;
-  font-size: 1.25em;
+  letter-spacing: 0.5px;
+  font-size: 2vh;
+  padding: 0px 0px 10px 0;
 }
 footer .footer__suggest {
   display: flex;
@@ -19,6 +38,7 @@ footer .footer__suggest {
 }
 footer .fa-utensils {
   margin: 0 18px 0 0;
+  font-size: 1em;
 }
 footer .footer__sponso {
   display: flex;
@@ -26,6 +46,7 @@ footer .footer__sponso {
 }
 footer .fa-hands-helping {
   margin: 0 10px 0 0;
+  font-size: 0.9em;
 }
 
 /*# sourceMappingURL=footer.css.map */
