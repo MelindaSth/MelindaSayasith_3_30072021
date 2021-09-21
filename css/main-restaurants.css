@@ -232,7 +232,6 @@ main {
 .btn {
   display: flex;
   justify-content: center;
-  margin: 0px 0 15px 0;
 }
 .btn input {
   background: linear-gradient(to bottom, #FF79DA 5%, #9356DC 100%);
